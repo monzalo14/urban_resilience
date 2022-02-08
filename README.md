@@ -7,6 +7,14 @@ Quickstart:
 PYTHONPATH="." python urban_resilience/extraction/extract.py
 ```
 
+## Modelado
+
+Quickstart:
+En la carpeta raíz del proyecto, ejecutar:
+```
+docker run -it --rm -v `pwd`/data/latest:/data -v `pwd`/models:/models -v `pwd`/output/:/output urban_resilience:latest
+```
+
 ### Algunas notas
 
 - Actualmente, el módulo de extracción está configurado para obtener fuentes de datos desde el [Portal de Datos Abiertos de la CDMX](https://datos.cdmx.gob.mx/).

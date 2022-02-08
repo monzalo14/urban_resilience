@@ -12,6 +12,6 @@ ADD requirements.txt /tmp/requirements.txt
 
 RUN pip install -r /tmp/requirements.txt
 
-ADD urban_resilience .
+ADD urban_resilience /urban_resilience
 
 CMD [ "/bin/sh", "-c", "python /urban_resilience/models/modelo_prueba.py"]

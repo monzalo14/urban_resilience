@@ -130,28 +130,28 @@ for epoch in range(num_apoch):
     #if (epoch+1) %15 == 0:
     print(f'epoch: {epoch+1}, loss = {loss.item():.4f}')
 
-print(model[0])
+#  print(model[0])
+#
+#  model.weight
+#
+#  model.weight
+#
+#  model.bias
+#
+#  model.bias
 
-model.weight
-
-model.weight
-
-model.bias
-
-model.bias
-
-torch.save(model)
-
-predicted = model(X_train).detach().numpy()
-plt.plot(X_train,y_train, 'ro')
-plt.plot(X_train, predicted, 'k')
-plt.show()
+torch.save(model, '/models/modelo_prueba.pt')
 
 predicted = model(X_train).detach().numpy()
 plt.plot(X_train,y_train, 'ro')
 plt.plot(X_train, predicted, 'k')
 plt.show()
-plt.savefig('resultados.png')
+
+predicted = model(X_train).detach().numpy()
+plt.plot(X_train,y_train, 'ro')
+plt.plot(X_train, predicted, 'k')
+plt.show()
+plt.savefig('/output/resultados.png')
 
 """# Pendientes
 - Investigar interacción Spark vs. Postgres (Moni)
